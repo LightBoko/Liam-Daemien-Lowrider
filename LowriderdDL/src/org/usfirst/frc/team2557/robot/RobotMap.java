@@ -29,6 +29,12 @@ public class RobotMap {
 	public static Counter encoderLeftDrive;
 	public static Counter encoderRightDrive;
 	public static Counter encoderWinch;
+	
+	public static void init(){
+		robotDrive = new RobotDrive(backLeft, backRight, frontLeft, frontRight);
+		robotDrive.setSafetyEnabled(false);
+		
+	}
     // For example to map the left and right motors, you could define the
     // following variables to use with your drivetrain subsystem.
     // public static int leftMotor = 1;
