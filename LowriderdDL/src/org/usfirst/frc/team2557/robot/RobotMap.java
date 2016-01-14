@@ -4,7 +4,6 @@ import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.Counter;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.RobotDrive;
-import edu.wpi.first.wpilibj.SpeedController;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -14,16 +13,17 @@ import edu.wpi.first.wpilibj.SpeedController;
  */
 public class RobotMap {
 	//Drive train
-	public static CANTalon winch;
-	public static CANTalon frontLeft;
-	public static CANTalon backLeft;
-	public static CANTalon frontRight;
-	public static CANTalon backRight;
+	public static CANTalon frontLeft = new CANTalon(4);
+	public static CANTalon backLeft = new CANTalon(0);
+	public static CANTalon frontRight = new CANTalon(5);
+	public static CANTalon backRight = new CANTalon(1);
 	public static RobotDrive robotDrive;
+	
 	//Intake
-	public static CANTalon intakeMotor;	
+	public static CANTalon intakeMotor = new CANTalon(3);	
 	public static DoubleSolenoid intakeArm;	
-
+	
+	public static CANTalon winch = new CANTalon(2);
 	public static DoubleSolenoid winchLock;
 	public static DoubleSolenoid superShifter;
 	public static Counter encoderLeftDrive;

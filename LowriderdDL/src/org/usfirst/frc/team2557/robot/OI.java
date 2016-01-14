@@ -1,6 +1,8 @@
 package org.usfirst.frc.team2557.robot;
 
-import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
 import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
 
 /**
@@ -8,6 +10,57 @@ import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+	public Joystick gamepad1;
+	public Joystick gamepad2;
+	
+	public JoystickButton buttonA1;
+	public JoystickButton buttonB1;
+	public JoystickButton buttonX1;
+	public JoystickButton buttonY1;
+	public JoystickButton buttonLB1;
+	public JoystickButton buttonRB1;
+	public JoystickButton buttonBack1;
+	public JoystickButton buttonStart1;
+	public JoystickButton buttonLJ1;
+	public JoystickButton buttonRJ1;
+	
+	public JoystickButton buttonA2;
+	public JoystickButton buttonB2;
+	public JoystickButton buttonX2;
+	public JoystickButton buttonY2;
+	public JoystickButton buttonLB2;
+	public JoystickButton buttonRB2;
+	public JoystickButton buttonBack2;
+	public JoystickButton buttonStart2;
+	public JoystickButton buttonLJ2;
+	public JoystickButton buttonRJ2;
+	
+	public OI(){
+		gamepad1 = new Joystick(0);
+		gamepad2 = new Joystick(1);
+		
+		buttonA1 	 = new JoystickButton(gamepad1,0);
+		buttonB1 	 = new JoystickButton(gamepad1,1);
+		buttonX1 	 = new JoystickButton(gamepad1,2);
+		buttonY1     = new JoystickButton(gamepad1,3);
+		buttonLB1    = new JoystickButton(gamepad1,4);
+		buttonRB1    = new JoystickButton(gamepad1,5);
+		buttonBack1  = new JoystickButton(gamepad1,6);
+		buttonStart1 = new JoystickButton(gamepad1,7);
+		buttonLJ1    = new JoystickButton(gamepad1,8);
+		buttonRJ1    = new JoystickButton(gamepad1,9);
+		
+		buttonA2	 = new JoystickButton(gamepad2,0);
+		buttonB2 	 = new JoystickButton(gamepad2,1);
+		buttonX2 	 = new JoystickButton(gamepad2,2);
+		buttonY2     = new JoystickButton(gamepad2,3);
+		buttonLB2    = new JoystickButton(gamepad2,4);
+		buttonRB2    = new JoystickButton(gamepad2,5);
+		buttonBack2  = new JoystickButton(gamepad2,6);
+		buttonStart2 = new JoystickButton(gamepad2,7);
+		buttonLJ2    = new JoystickButton(gamepad2,8);
+		buttonRJ2    = new JoystickButton(gamepad2,9);
+	}
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button
