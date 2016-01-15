@@ -18,7 +18,7 @@ public class WinchSubsystem extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
     public void winch(){
-    	RobotMap.winch.set(Robot.oi.gamepad1.getRawAxis(5));
+    	RobotMap.winch.set(Robot.oi.gamepad1.getRawAxis(1));
     }
 }
 
