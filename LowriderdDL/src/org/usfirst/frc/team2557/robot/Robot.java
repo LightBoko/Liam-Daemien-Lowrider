@@ -104,6 +104,10 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        DriveCommand.start();
+        IntakeCommand.start();
+        winch.start();
+        winchLock.start();
     }
     
     /**
