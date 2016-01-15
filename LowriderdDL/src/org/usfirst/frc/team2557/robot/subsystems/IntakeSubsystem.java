@@ -18,7 +18,7 @@ public class IntakeSubsystem extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
     public void intake(){
-    	RobotMap.intakeMotor.set(Robot.oi.gamepad1.getRawAxis(5));
+    	RobotMap.intakeMotor.set(Robot.oi.gamepad2.getRawAxis(5));
     }
 
 }
