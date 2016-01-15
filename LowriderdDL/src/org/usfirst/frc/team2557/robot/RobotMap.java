@@ -21,11 +21,11 @@ public class RobotMap {
 	
 	//Intake
 	public static CANTalon intakeMotor = new CANTalon(3);	
-	public static DoubleSolenoid intakeArmSol;	
+	public static DoubleSolenoid intakeArmSol = new DoubleSolenoid(0, 4, 5);	
 	
 	public static CANTalon winch = new CANTalon(2);
-	public static DoubleSolenoid winchLockSol;
-	public static DoubleSolenoid superShifterSol;
+	public static DoubleSolenoid winchLockSol = new DoubleSolenoid(0, 0, 1);
+	public static DoubleSolenoid superShifterSol = new DoubleSolenoid(0, 4, 5);
 	public static Counter encoderLeftDrive;
 	public static Counter encoderRightDrive;
 	public static Counter encoderWinch;
@@ -34,9 +34,7 @@ public class RobotMap {
 		robotDrive = new RobotDrive(backLeft, backRight, frontLeft, frontRight);
 		robotDrive.setSafetyEnabled(false);
 		
-		intakeArmSol = new DoubleSolenoid(0, 2, 3);
-		winchLockSol = new DoubleSolenoid(0, 0, 1);
-		superShifterSol = new DoubleSolenoid(0, 4, 5);
+		
 		
 	}
     // For example to map the left and right motors, you could define the

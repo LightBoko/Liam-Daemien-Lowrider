@@ -14,7 +14,7 @@ public class winch extends Command {
     public winch() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	requires(Robot.intakeSubsystem);
+    	requires(Robot.winchSubsystem);
     }
 
     // Called just before this Command runs the first time
@@ -23,21 +23,9 @@ public class winch extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-if (Robot.oi.gamepad1.getRawButton(6)){
-    		
-    		RobotMap.winch.set(1);
+    	Robot.winchSubsystem.winch();
     	}
-    	else if (RobotMap.intakeArmSol.get() == Value.kReverse && Robot.oi.gamepad1.getRawButton(5)){
-    			
-    			RobotMap.winch.set(1);
-    	}
-    	else if (RobotMap.intakeArmSol.get() == Value.kForward && Robot.oi.gamepad1.getRawButton(5)){
-    			
-    			RobotMap.winch.set(-1);
-    	}
-    	else{
-    		RobotMap.winch.set(0);}
-    }
+
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
@@ -46,6 +34,7 @@ if (Robot.oi.gamepad1.getRawButton(6)){
 
     // Called once after isFinished returns true
     protected void end() {
+    	RobotMap.winchLockSol.set(Value.kReverse);
     }
 
     // Called when another command which requires one or more of the same

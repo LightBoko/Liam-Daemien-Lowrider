@@ -23,9 +23,14 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static DriveSubsystem driveSubsystem;
 	public static IntakeSubsystem intakeSubsystem;
+	public static WinchSubsystem winchSubsystem;
 
     Command autonomousCommand;
     SendableChooser chooser;
+    Command DriveCommand;
+    Command IntakeCommand;
+    Command winch;
+    Command winchLock;
 
     /**
      * This function is run when the robot is first started up and should be

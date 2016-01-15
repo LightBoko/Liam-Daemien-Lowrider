@@ -3,8 +3,6 @@ package org.usfirst.frc.team2557.robot;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
-
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -34,6 +32,8 @@ public class OI {
 	public JoystickButton buttonStart2;
 	public JoystickButton buttonLJ2;
 	public JoystickButton buttonRJ2;
+	Joystick robotDrive;
+	
 	
 	public OI(){
 		gamepad1 = new Joystick(0);
