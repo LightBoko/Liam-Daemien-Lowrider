@@ -32,7 +32,7 @@ public class OI {
 	public JoystickButton buttonStart2;
 	public JoystickButton buttonLJ2;
 	public JoystickButton buttonRJ2;
-	Joystick robotDrive;
+	Joystick drivetrain;
 	
 	
 	public OI(){
@@ -61,6 +61,12 @@ public class OI {
 		buttonLJ2    = new JoystickButton(gamepad2,8);
 		buttonRJ2    = new JoystickButton(gamepad2,9);
 	}
+    public Joystick getGamepad1() {
+    	return gamepad1;
+    }
+    public Joystick getGamepad2() {
+    	return gamepad2;
+    }
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button
