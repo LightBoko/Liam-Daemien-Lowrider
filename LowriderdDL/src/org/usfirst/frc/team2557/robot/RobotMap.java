@@ -1,7 +1,9 @@
 package org.usfirst.frc.team2557.robot;
 
+import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.Counter;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.RobotDrive;
 
@@ -29,6 +31,10 @@ public class RobotMap {
 	public static Counter encoderLeftDrive;
 	public static Counter encoderRightDrive;
 	public static Counter encoderWinch;
+	
+	public static AnalogInput rangefinder = new AnalogInput(0);
+	public static AnalogInput rangeFinder2 = new AnalogInput(1);
+	public static DigitalInput limitswitch = new DigitalInput(0);
 	
 	public static void init(){
 		robotDrive = new RobotDrive(backLeft, backRight, frontLeft, frontRight);
